@@ -16,3 +16,6 @@ You can find an example of how to use this API in the example.py file.
 
 ### Disclaimer
 This repository is for educational and research purposes only, and the use of this API for any other purpose is at your own risk. We are not responsible for any actions taken by users of this API.
+
+#### Requirements: 
+requests. 
