@@ -1,4 +1,4 @@
-# Quora Poe API Reverse Engineering
+# Quora Poe reverse-engineered API
 This is a reverse-engineered API for Quora's Poe that allows access to the following chatbots:
 
 1. Claude - Anthropic (a2)
