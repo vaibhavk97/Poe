@@ -54,7 +54,7 @@ def clear_context(chatid):
             "chatId": chatid
         }
     }    
-    _ = requests.post(url, headers=headers, data=data)
+    _ = requests.post(url, headers=headers, json=data)
 
 def get_latest_message(bot):
     data = {
