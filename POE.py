@@ -18,7 +18,6 @@ def set_auth(key, value):
     headers[key] = value
 
 def load_chat_id_map(bot="a2"):
-    url = 'https://www.quora.com/poe_api/gql_POST'
     data = {
         'operationName': 'ChatViewQuery',
         'query': 'query ChatViewQuery($bot: String!) {\n  chatOfBot(bot: $bot) {\n    __typename\n    ...ChatFragment\n  }\n}\nfragment ChatFragment on Chat {\n  __typename\n  id\n  chatId\n  defaultBotNickname\n  shouldShowDisclaimer\n}',
