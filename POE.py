@@ -17,8 +17,6 @@ headers = {
 def set_auth(key, value):
     headers[key] = value
 
-chat_id_bot_map = {}
-
 def load_chat_id_map(bot="a2"):
     url = 'https://www.quora.com/poe_api/gql_POST'
     data = {
@@ -29,16 +27,15 @@ def load_chat_id_map(bot="a2"):
         }
     }    
     response = requests.post(url, headers=headers, json=data)
-    chat_id_bot_map[bot] = response.json()['data']['chatOfBot']['chatId']
-    return chat_id_bot_map[bot]
+    return response.json()['data']['chatOfBot']['chatId']
 
-def send_message(message,bot="a2"):
+def send_message(message,bot="a2",chat_id=""):
     data = {
     "operationName": "AddHumanMessageMutation",
     "query": "mutation AddHumanMessageMutation($chatId: BigInt!, $bot: String!, $query: String!, $source: MessageSource, $withChatBreak: Boolean! = false) {\n  messageCreate(\n    chatId: $chatId\n    bot: $bot\n    query: $query\n    source: $source\n    withChatBreak: $withChatBreak\n  ) {\n    __typename\n    message {\n      __typename\n      ...MessageFragment\n      chat {\n        __typename\n        id\n        shouldShowDisclaimer\n      }\n    }\n    chatBreak {\n      __typename\n      ...MessageFragment\n    }\n  }\n}\nfragment MessageFragment on Message {\n  id\n  __typename\n  messageId\n  text\n  linkifiedText\n  authorNickname\n  state\n  vote\n  voteReason\n  creationTime\n  suggestedReplies\n}",
     "variables": {
         "bot": bot,
-        "chatId": chat_id_bot_map[bot],
+        "chatId": chat_id,
         "query": message,
         "source": None,
         "withChatBreak": False
@@ -77,5 +74,5 @@ def get_latest_message(bot):
         author_nickname = response_json['data']['chatOfBot']['messagesConnection']['edges'][-1]['node']['authorNickname']
         if author_nickname==bot and state=='complete':
             break
-    print(author_nickname," : ",text)
+    return text
 
