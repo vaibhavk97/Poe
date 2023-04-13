@@ -5,12 +5,15 @@ set_auth('Quora-Formkey','xxxx')
 set_auth('Cookie','m-b=xxxxx')
 #---------------------------------------------------------------------------
 print("Who do you want to talk to?")
-print("1. Claude - Anthropic (a2)")
-print("2. ChatGPT-Big - OpenAI (capybara)")
-print("3. ChatGPT-Small - Openai (nutria)")
+print("1. Sage - OpenAI (capybara)")
+print("2. GPT-4 - OpenAI (beaver)")
+print("3. Claude+ - Anthropic (a2_2)")
+print("4. Claude - Anthropic (a2)")
+print("5. ChatGPT - OpenAI (chinchilla)")
+print("6. Dragonfly - OpenAI (nutria)")
 #---------------------------------------------------------------------------
 option = input("Please enter your choice : ")
-bots = {1:'a2',2:'capybara',3:'nutria'}
+bots = {1:'capybara', 2:'beaver', 3:'a2_2', 4:'a2', 5:'chinchilla', 6:'nutria'}
 bot = bots[int(option)]
 print("The selected bot is : ", bot)
 #---------------------------------------------------------------------------
