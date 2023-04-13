@@ -1,9 +1,12 @@
 # Quora Poe reverse-engineered API
 This is a reverse-engineered API for Quora's Poe that allows access to the following chatbots:
 
-1. Claude - Anthropic (a2)
-2. ChatGPT-Big - OpenAI (capybara)
-3. ChatGPT-Small - OpenAI (nutria)
+1. Sage - OpenAI (capybara)
+2. GPT-4 - OpenAI (beaver)
+3. Claude+ - Anthropic (a2_2)
+4. Claude - Anthropic (a2)
+5. ChatGPT - OpenAI (chinchilla)
+6. Dragonfly - OpenAI (nutria)
 ### Requirements
 To use this API, you will need to have the following cookies:
 
