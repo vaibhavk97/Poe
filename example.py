@@ -11,9 +11,10 @@ print("3. Claude+ - Anthropic (a2_2)")
 print("4. Claude - Anthropic (a2)")
 print("5. ChatGPT - OpenAI (chinchilla)")
 print("6. Dragonfly - OpenAI (nutria)")
+print("7. Neeva - NeevaAI (hutia)")
 #---------------------------------------------------------------------------
 option = input("Please enter your choice : ")
-bots = {1:'capybara', 2:'beaver', 3:'a2_2', 4:'a2', 5:'chinchilla', 6:'nutria'}
+bots = {1:'capybara', 2:'beaver', 3:'a2_2', 4:'a2', 5:'chinchilla', 6:'nutria', 7:'hutia'}
 bot = bots[int(option)]
 print("The selected bot is : ", bot)
 #---------------------------------------------------------------------------
