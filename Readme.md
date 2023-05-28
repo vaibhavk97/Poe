@@ -7,7 +7,7 @@ This is a reverse-engineered API for Quora's Poe that allows access to the follo
 4. Claude - Anthropic (a2)
 5. ChatGPT - OpenAI (chinchilla)
 6. Dragonfly - OpenAI (nutria)
-7. NeevaAI - Neeva (hutia)
+
 ### Requirements
 To use this API, you will need to have the following cookies:
 
